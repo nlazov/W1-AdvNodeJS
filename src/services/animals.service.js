@@ -1,8 +1,12 @@
 import { Animal } from "../models/animals.model.js";
 export default class AnimalsService {
-    static getAllAnimals(){
+    static getAllAnimals({status}){
+        if (status){
+            return Animal.find({status});
+        }
         return Animal.find({});
     }
+
     static getAnimalById(animalId){
         return Animal.findById(animalId);
     }

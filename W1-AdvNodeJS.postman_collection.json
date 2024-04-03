@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "7a4a9f4d-3510-4431-b17f-66f234e37964",
+		"name": "W1-AdvNodeJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33333050"
+	},
+	"item": [
+		{
+			"name": "Add animal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Rocky\",\n    \"type\": \"Dog\",\n    \"breed\": \"Cane Corso\",\n    \"age\": 7,\n    \"status\": \"Available\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/animals/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"animals",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add adoption",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"adopterName\": \"Jas samiot gazda\",\n    \"animal\":\"660d964a3274194500a5a69c\",\n    \"email\": \"niko@mail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/adoptions/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"adoptions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all animals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/animals",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"animals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all animals + params",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/animals?status=Available",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"animals"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "Available"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all adoptions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/adoptions/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"adoptions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get animal by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/animals/660d8729002c169a67531a39",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"animals",
+						"660d8729002c169a67531a39"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update animal",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ramboo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/animals/660d8729002c169a67531a39",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"animals",
+						"660d8729002c169a67531a39"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete animal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/animals/660d8729002c169a67531a39",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"animals",
+						"660d8729002c169a67531a39"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

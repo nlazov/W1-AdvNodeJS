@@ -4,8 +4,8 @@ import {animalSchema, updateSchema} from "../schemas/animals.schema.js";
 export default class animalsController {
     static async getAllAnimals (req, res){
         try {
-            const animals = await AnimalsService.getAllAnimals()
-            res.send(animals)
+            const animals = await AnimalsService.getAllAnimals(req.query);
+            res.send(animals);
         } catch (error) {
             res.status(500).json({ msg: error.message });
         }
